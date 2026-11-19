@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GCET Smart Bus | Transport Management</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<aside class="sidebar"><div class="brand"><span class="logo">G</span><div><b>GCET SMART BUS</b><small>Transport Portal</small></div></div>
+<nav><button class="nav active" data-page="dashboard">▦ Dashboard</button><button class="nav" data-page="buses">▣ Buses</button><button class="nav" data-page="routes">⌖ Routes</button><button class="nav" data-page="students">♙ Students</button><button class="nav" data-page="drivers">♧ Drivers</button><button class="nav" data-page="schedules">◷ Schedules</button></nav>
+<div class="sidebottom">GEETHANJALI COLLEGE<br>OF ENGINEERING & TECHNOLOGY</div></aside>
+<main><header><div><small>TRANSPORT MANAGEMENT</small><h1 id="pageTitle">Dashboard</h1></div><div class="user"><span class="avatar">A</span><div><b>Administrator</b><small>System Admin</small></div></div></header>
+<section id="dashboard" class="page">
+<div class="welcome"><div><span class="eyebrow">SMART CAMPUS MOBILITY</span><h2>Welcome to GCET Smart Bus</h2><p>Manage your campus transportation in one place.</p></div><div class="bus-art">🚌</div></div>
+<div class="stats"><article><span>Total Buses</span><strong id="busCount">0</strong><small>Registered fleet</small></article><article><span>Active Routes</span><strong id="routeCount">0</strong><small>Campus connectivity</small></article><article><span>Students</span><strong id="studentCount">0</strong><small>Transport users</small></article><article><span>Drivers</span><strong id="driverCount">0</strong><small>Assigned staff</small></article></div>
+<div class="panel"><div class="panelhead"><div><h3>Smart Route Assistant</h3><p>Find a suitable bus using your pickup point.</p></div><span class="pill">SMART SEARCH</span></div><div class="searchrow"><input id="pickup" placeholder="Enter your pickup location (e.g. ECIL)"><button id="findBus">Find my bus</button></div><div id="routeResult" class="result">Enter your pickup location to view matching routes.</div></div>
+<div class="panel"><div class="panelhead"><div><h3>Recent bus fleet</h3><p>Quick view of registered buses.</p></div><button class="outline" onclick="showPage('buses')">View all</button></div><div id="recentBuses"></div></div>
+</section>
+<section id="buses" class="page hidden"><div class="toolbar"><p>Manage the college bus fleet.</p><button onclick="openModal('bus')">+ Add Bus</button></div><div class="panel"><div id="busTable"></div></div></section>
+<section id="routes" class="page hidden"><div class="toolbar"><p>Manage pickup points and bus routes.</p><button onclick="openModal('route')">+ Add Route</button></div><div class="panel"><div id="routeTable"></div></div></section>
+<section id="students" class="page hidden"><div class="toolbar"><p>Student transport registrations.</p><button onclick="openModal('student')">+ Add Student</button></div><div class="panel"><div id="studentTable"></div></div></section>
+<section id="drivers" class="page hidden"><div class="toolbar"><p>Driver contact and assignment details.</p><button onclick="openModal('driver')">+ Add Driver</button></div><div class="panel"><div id="driverTable"></div></div></section>
+<section id="schedules" class="page hidden"><div class="toolbar"><p>Daily transport timings.</p><button onclick="openModal('schedule')">+ Add Schedule</button></div><div class="panel"><div id="scheduleTable"></div></div></section>
+</main>
+<div id="modal" class="modal hidden"><div class="modalbox"><button class="close" onclick="closeModal()">×</button><h2 id="modalTitle">Add item</h2><form id="itemForm"></form></div></div>
+<script src="app.js"></script></body></html>
